@@ -13,10 +13,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class Test {
 
-    @RequestMapping("test.do")
+    @RequestMapping("index.do")
     public String test(Model model){
-        System.out.println("------------test----------");
-        model.addAttribute("username","张三");
+        System.out.println("------------index----------");
         return "index";
+    }
+
+    @RequestMapping("header.do")
+    public String header(Model model){
+        System.out.println("------------header----------");
+        return "usercenter";
+    }
+
+    @RequestMapping("footer.do")
+    public String footer(Model model){
+        System.out.println("------------footer----------");
+        return "footer";
     }
 }
