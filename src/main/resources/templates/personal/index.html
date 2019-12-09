@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<title>个人信息</title>
+	<link rel="stylesheet" type="text/css" href="../../static/css/public.css" th:href="@{/css/public.css}"/>
+	<link rel="stylesheet" type="text/css" href="../../static/css/mygxin.css" th:href="@{/css/mygxin.css}"/>
+</head>
+<body>
+	<div th:include="personal/header::header"></div>
+
+	<!------------------------------idea------------------------------>
+	<div class="address mt">
+		<div class="wrapper clearfix">
+			<a href="test.do?str=index" class="fl">首页</a>
+			<span>/</span>
+			<a href="test.do?str=personal/index">个人中心</a>
+		</div>
+	</div>
+
+	<!------------------------------Bott------------------------------>
+	<div class="Bott">
+		<div class="wrapper clearfix">
+
+			<div th:include="personal/siderbar::siderbar"></div>
+
+			<div class="you fl">
+				<div class="tx clearfix">
+					<div class="fl clearfix">
+						<a href="#" class="fl"><img src="img/tx.png" th:src="@{/img/tx.png}"/></a>
+						<p class="fl"><span>六六六</span><a href="test.do?str=personal/index">修改个人信息></a></p>
+					</div>
+					<div class="fr">绑定邮箱：12****4@**.com</div>
+				</div>
+				<div class="bott">
+					<div class="clearfix">
+						<a href="#" class="fl"><img src="img/gxin1.jpg" th:src="@{/img/gxin1.jpg}"/></a>
+						<p class="fl"><span>待支付的订单：<strong>0</strong></span>
+							<a href="myorderq.html">查看待支付订单></a>
+						</p>
+					</div>
+					<div class="clearfix">
+						<a href="#" class="fl"><img src="img/gxin2.jpg" th:src="@{/img/gxin2.jpg}"/></a>
+						<p class="fl"><span>待收货的订单：<strong>0</strong></span>
+							<a href="myorderq.html">查看待收货订单></a>
+						</p>
+					</div>
+					<div class="clearfix">
+						<a href="#" class="fl"><img src="img/gxin3.jpg" th:src="@{/img/gxin3.jpg}"/></a>
+						<p class="fl"><span>待评价的订单：<strong>0</strong></span>
+							<a href="myprod.html">查看待评价订单></a>
+						</p>
+					</div>
+					<div class="clearfix">
+						<a href="#" class="fl"><img src="img/gxin4.jpg" th:src="@{/img/gxin4.jpg}"/></a>
+						<p class="fl"><span>喜欢的商品：<strong>0</strong></span>
+							<a href="#">查看喜欢的商品></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div th:include="footer::footer"></div>
+
+	<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

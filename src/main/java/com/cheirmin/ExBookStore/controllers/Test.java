@@ -14,20 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Test {
 
     @RequestMapping("index.do")
-    public String test(Model model){
+    public String index(Model model){
         System.out.println("------------index----------");
         return "index";
     }
 
-    @RequestMapping("header.do")
-    public String header(Model model){
-        System.out.println("------------header----------");
-        return "usercenter";
-    }
-
-    @RequestMapping("footer.do")
-    public String footer(Model model){
-        System.out.println("------------footer----------");
-        return "footer";
+    @RequestMapping("test.do")
+    public String test(String str){
+        System.out.println("------------" + str + "----------");
+        return str;
     }
 }

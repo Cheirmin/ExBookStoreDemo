@@ -5,7 +5,6 @@ spring:
       max-file-size: 20MB
       max-request-size: 200MB
 
-
 #mybatis:
 #  mapperLocations: classpath:mapping/*.xml
 #  typeAliasesPackage: com.cheirmin.thymeleaf.pojo
