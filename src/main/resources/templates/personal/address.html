@@ -13,11 +13,11 @@
 	<!------------------------------idea------------------------------>
 	<div class="address mt">
 		<div class="wrapper clearfix">
-			<a href="test.do?str=index" class="fl">首页</a>
+			<a th:href="@{/index}" class="fl">首页</a>
 			<span>/</span>
-			<a href="test.do?str=personal/index">个人中心</a>
+			<a th:href="@{/personal/usercenter}">个人中心</a>
 			<span>/</span>
-			<a href="#" class="on">地址管理</a>
+			<a th:href="@{/personal/address}" class="on">地址管理</a>
 		</div>
 	</div>
 
@@ -31,7 +31,7 @@
 				<h2>收货地址</h2>
 				<div class="add">
 					<div>
-						<a href="#2" id="addxad"><img src="img/jia.png"/></a>
+						<a href="#2" id="addxad"><img src="img/jia.png" th:src="@{/img/jia.png}"/></a>
 						<span>添加新地址</span>
 					</div>
 					<div id="dizhi">
