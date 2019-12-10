@@ -9,22 +9,23 @@
     <link rel="stylesheet" href="../../static/css/login.css" th:href="@{/css/login.css}">
 </head>
 <body>
-  <form class="login-form" action="test.do?str=index" method="post">
-     <h1><img src="../../static/img/logo.png" th:src="@{/img/logo.png}"/></h1>
-     <div class="form-group ">
-       <input type="text" class="form-control" placeholder="Your Email" id="username">
-       <i class="fa fa-user"></i>
+    <form class="login-form " action="test.do?str=index" method="post" id="form">
+        <input type="hidden" id="password1" value="-1">
+        <h1><img src="../../static/img/logo.png" th:src="@{/img/logo.png}"/></h1>
+        <div class="form-group log-status-email">
+            <input type="text" class="form-control" placeholder="Your Email" id="email">
+            <i class="fa fa-user"></i>
      </div>
-     <div class="form-group log-status">
-       <input type="password" class="form-control" placeholder="Password" id="password">
-       <i class="fa fa-lock"></i>
+     <div class="form-group log-status-password">
+         <input type="password" class="form-control" placeholder="Password" id="password">
+         <i class="fa fa-lock"></i>
      </div>
-      <span class="alert">Invalid Credentials</span>
-      <a class="leftlink" href="test.do?str=user/retrievepassword">忘记密码?</a>
-      <a class="link" href="test.do?str=user/register">还没有账号?</a>
-      <button class="log-btn" >登陆</button>
-  </form>
-  <script src='../../static/js/jquery-1.12.4.min.js' ></script>
-  <script src="../../static/js/login.js" th:src="@{/js/login/js}"></script>
+        <span class="alert" id="msg"></span>
+        <a class="link" href="test.do?str=user/retrievepassword">忘记密码?</a>
+        <button type="button" class="log-btn" >登陆</button>
+        <br><br><a class="link" href="test.do?str=user/register">还没有账号?</a>
+    </form>
+  <script src='../../static/js/jquery-1.12.4.min.js' th:src="@{/js/jquery-1.12.4.min.js}"></script>
+  <script src="../../static/js/login.js" th:src="@{/js/login.js}"></script>
 </body>
 </html>
