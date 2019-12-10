@@ -12,6 +12,9 @@
 # Log file
 *.log
 
+#项目iml文件
+*.iml
+
 # BlueJ files
 *.ctxt
 
